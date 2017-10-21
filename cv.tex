@@ -1,0 +1,99 @@
+\documentclass[a4paper, 10pt]{article}
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{url,parskip}
+
+\RequirePackage{color, graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+
+\usepackage{supertabular}
+\usepackage{titlesec}
+
+\usepackage{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+
+\titleformat{\section}{\Large\scshape\raggedright}{}{0cm}{}[\titlerule]
+\titlespacing{\section}{0pt}{3pt}{3pt}
+\hyphenation{im-pre-se}
+
+\geometry{
+	top=1cm,
+	bottom=1cm,
+}
+
+\begin{document}
+
+\pagestyle{empty}
+
+\par{\centering
+		{\Huge Felix \textsc{Hiller}
+	}\bigskip\par}
+
+%--------------------SECTIONS-----------------------------------
+%Section: Personal Data
+\section{Personal Data}
+
+\begin{tabular}{rl}
+    \textsc{Date of Birth:} & 16 February 1996\\
+    \textsc{Address:}   & 47 North Road, Selly Oak, Birmingham, B29 6AN\\
+    \textsc{Phone:}     & +447535607186\\
+    \textsc{Email:}     & \href{mailto:Felix.a.Hiller@gmail.com}{Felix.a.Hiller@gmail.com}\\
+	\textsc{GitHub:}	& \url{https://github.com/precastwig}
+\end{tabular}
+
+%Section: Work Experience at the top
+\section{Work Experience}
+
+%\begin{tabular}{rl}
+ \textsc{July 2017 - Current} \emph{Personal Tutor in Computer Science for University Students}\\
+ \textsc{August 2015 - May 2016} \emph{Clerical Assistant Canvas and eLearning Support Admin Assistant}\\
+ \footnotesize{Working with the University of Birmingham's Canvas system to aid with the creation and maintenance of university courses. Creating and editing pages for the University of Birmingham external website}\\
+ \normalsize\textsc{June 2012 - August 2012} \emph{Store Assistant, Scotsdales, Cambridge}\\
+ \footnotesize{Helping customers face-to-face and general store maintenance duties, unloading stock and loading customers' cars.}
+%\end{tabular}
+\normalsize
+%Section: Education
+\section{Education}
+\textsc{Current} \emph{4th Year Masters Degree in Computer Science} University of Birmingham\\
+ \tab\textsc{3rd year} \textbf{74\%} \\
+ \tab\textsc{2nd year} \textbf{70\%} \\
+ \tab\textsc{1st year} \textbf{73\%}\\
+\textsc{2012 - 2014} \emph{A-Levels} Hills Road Sixth Form College, Cambridge \\
+	\tab\textsc{Mathematics} \textbf{A} \\
+	\tab\textsc{Computer Science} \textbf{A} \\
+	\tab\textsc{Physics} \textbf{B}\\
+\textsc{2007 - 2012} \emph{Eight GCSEs at grade B or above, including Maths(A) and English(A)} Coleridge Community College, Cambridge
+
+%Section: Technical skills
+\section{Technical skills}
+ \textsc{Programming Languages:}\\
+ \tab\textbf{Java, C, C++}: Highly skilled with 4-5 years of experience\\
+ \tab\textbf{Ocaml}: Strong knowledge with 2-3 years of experience\\
+ \tab\textbf{Python, C\#, Haskell, Pascal}: Working knowledge with 1-2 years of experience\\
+ \textsc{Software packages:}\\
+ \tab\textbf{Adobe Photoshop, Excel}: Highly skilled with 4-5 years of experience\\
+ \tab\textbf{Adobe Premiere, 3D Studio Max}: Working knowledge with 1-2 years of experience\\
+ \textsc{Other technical skills:}\\
+ \tab\textbf{HTML, CSS, XML, SQL, LaTeX}: Skilled with 4 years of experience\\
+ \tab\textbf{Git, SVN}: Strong knowledge
+
+%Section: Projects
+\section{Projects}
+ \textsc{Super Noughts and Crosses}\\
+ \footnotesize\textsc{Personal project where I created a more interesting version of noughts and crosses with Java Swing.}\\\\
+ \normalsize\textsc{ELO rating system}\\
+ \footnotesize\textsc{Personal project creating an ELO system to rate 1v1 competitive players in a game. Created for my housemates running chess league. Written in C++.}\\\\
+ \normalsize\textsc{Compiler Construction}\\
+ \footnotesize\textsc{For my university degree I created a compiler for a custom C-like language in OCaml using Menhir.}
+ 
+\normalsize
+%Section: Languages
+\section{Interests and Hobbies}
+ Active participant in the University of Birmingham Mountaneering Society.\\
+ Working knowledge of Swedish; self taught.\\
+ Grade 4 Piano\\
+ Participant in Brumhack, a student run hackathon in the University of Birmingham.\\
+\end{document}
