@@ -10,6 +10,7 @@
 
 \usepackage{supertabular}
 \usepackage{titlesec}
+\usepackage{tabularx}
 
 \usepackage{hyperref}
 \definecolor{linkcolour}{rgb}{0,0.2,0.6}
@@ -24,12 +25,22 @@
 	bottom=1cm,
 }
 
+\newenvironment{goingright}{
+	\setlength\topsep{-0pt}
+	\setlength\parskip{0pt}
+	\setlength\topmargin{0pt}
+	\setlength\voffset{-0.75in}
+	\begin{flushright}
+}{
+	\end{flushright}
+}
+
 \begin{document}
 
 \pagestyle{empty}
 
 \par{\centering
-		{\Huge Felix \textsc{Hiller}
+		{\Huge Felix Hiller
 	}\bigskip\par}
 
 %--------------------SECTIONS-----------------------------------
@@ -38,9 +49,9 @@
 
 \begin{tabular}{rl}
     \textsc{Date of Birth:} & 16 February 1996\\
-    \textsc{Address:}   & 47 North Road, Selly Oak, Birmingham, B29 6AN\\
-    \textsc{Phone:}     & +447535607186\\
-    \textsc{Email:}     & \href{mailto:felix.a.hiller@gmail.com}{Felix.a.Hiller@gmail.com}\\
+    \textsc{Address:}   & 120a King Street, Norwich, NR1 1QE\\
+    \textsc{Phone:}     & +44 7535 607 186\\
+    \textsc{Email:}     & \href{mailto:felix.a.hiller@gmail.com}{felix.a.hiller@gmail.com}\\
 	\textsc{GitHub:}	& \url{https://github.com/precastwig}
 \end{tabular}
 
@@ -58,45 +69,47 @@
 \normalsize
 %Section: Education
 \section{Education}
-\textsc{Current} \emph{4th Year Masters Degree in Computer Science} University of Birmingham\\
- \tab\textsc{Due to graduate July 2018 with a first-class honours}\\
- \tab\textsc{September 2016 - July 2017} \emph{3rd year} \textbf{74\%} \\
- \tab\textsc{September 2015 - July 2016} \emph{2nd year} \textbf{70\%} \\
- \tab\textsc{September 2014 - July 2015} \emph{1st year} \textbf{73\%}\\
+\textsc{2014 - 2018} \emph{First class Masters Degree in Computer Science} University of Birmingham\\
 \textsc{2012 - 2014} \emph{A-Levels} Hills Road Sixth Form College, Cambridge \\
-	\tab\textsc{Mathematics} \textbf{A} \\
-	\tab\textsc{Computer Science} \textbf{A} \\
-	\tab\textsc{Physics} \textbf{B}\\
-\textsc{2007 - 2012} \emph{Eight GCSEs at grade B or above, including Maths(A) and English(A)} Coleridge Community College, Cambridge
+\textsc{2007 - 2012} \emph{Eight GCSEs} Coleridge Community College, Cambridge
 
 %Section: Technical skills
 \section{Technical skills}
  \textsc{Programming Languages:}\\
  \tab\textbf{C, C++}: Highly skilled with 5-6 years of experience\\
- \tab\textbf{Java, Ocaml, Haskell}: Strong knowledge with 2-3 years of experience\\
- \tab\textbf{Python, C\#, Pascal}: Working knowledge with 1-2 years of experience\\
+ \tab\textbf{Java, OCaml, Haskell}: Strong knowledge with 2-3 years of experience\\
+ \tab\textbf{Python, C\#, Pascal}: Working knowledge\\
  \textsc{Software packages:}\\
  \tab\textbf{Adobe Photoshop, Excel}: Highly skilled with 4-5 years of experience\\
- \tab\textbf{Adobe Premiere, 3D Studio Max}: Working knowledge with 1-2 years of experience\\
+ \tab\textbf{Adobe Premiere, 3D Studio Max}: Working knowledge\\
  \textsc{Other technical skills:}\\
  \tab\textbf{HTML, CSS, XML, SQL, LaTeX}: Skilled with 4 years of experience\\
  \tab\textbf{Git, SVN}: Strong knowledge
 
 %Section: Projects
 \section{Projects}
- \textsc{Final year project: "Reducing octrees depth to more efficiently traverse during ray-trace computations by creating non-uniform voxel octrees"}\\
- \footnotesize \textsc{I built a }\\\\
- \textsc{Super Noughts and Crosses}\\
- \footnotesize\textsc{Personal project where I created a more interesting version of noughts and crosses with Java Swing.}\\\\
- \normalsize\textsc{ELO rating system}\\
- \footnotesize\textsc{Personal project creating an ELO system to rate 1v1 competitive players in a game. Created for my housemates running chess league. Written in C++.}\\\\
- \normalsize\textsc{Compiler Construction}\\
- \footnotesize\textsc{For my university degree I created a compiler for a custom C-like language in OCaml using Menhir.}
- 
+
+
+ % \begin{tabular}{ l c r }
+ % 	\emph{C++} & \textsc{\textbf{Raytracer with novel optimisation}} & \href{https://github.com/Precastwig/RayTracer}{GitHub} \\
+ % 	\footnotesize Created for my masters thesis to provide evidence for my novel optimisation during ray-tracing calculations.& & \\
+ % \end{tabular}
+
+ \makebox[1cm]{\emph{C++}} \textsc{\textbf{Raytracer with novel optimisation}}\hfill \footnotesize \href{https://github.com/Precastwig/RayTracer}{GitHub} \\
+ Created for my masters thesis to provide evidence for my novel optimisation during ray-tracing calculations.\\\\
+ \normalsize
+ \makebox[1cm]{\emph{Java}} \textsc{\textbf{Super Noughts and Crosses}} \hfill \footnotesize \href{https://github.com/Precastwig/SuperNandX}{GitHub}\\
+ Personal project where I created a more interesting version of noughts and crosses.\\\\
+ \normalsize 
+ \makebox[1cm]{\emph{C++}} \textsc{\textbf{ELO rating system}} \hfill \footnotesize \href{https://github.com/Precastwig/ELOSystem}{GitHub}\\
+ Personal project creating an ELO based system to rate 1v1 competitive players in a game. Created to aid the running of a small chess league.\\\\
+ \normalsize 
+ \makebox[1cm]{\emph{OCaml}} \textsc{\textbf{Custom Compiler}} \hfill \footnotesize \href{https://github.com/Precastwig/Compiler-Construction}{GitHub}\\
+ Created for a degree module, a compiler for a custom C-like language using Menhir.
 \normalsize
 %Section: Languages
 \section{Interests and Hobbies}
- Avid climber and active participant in the University of Birmingham Mountaneering Society.\\
+ Avid climber and active participant in the University of Birmingham Mountaineering Society.\\
  Working knowledge of Swedish; self taught.\\
  Grade 4 Piano\\
  Participant in multiple hackathon events, run by students in the University of Birmingham.\\
